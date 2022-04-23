@@ -44,7 +44,7 @@ ID : {{ $pelanggan->id }}
         <div class="form-group">
             <label for="profile">Profile</label>
             @if($pelanggan->image_profile != null)
-            <img src="/upload/{{ $pelanggan->image_profile }}" />
+            <img src="{{env("MINIO_ENDPOINT")}}/{{env('MINIO_BUCKET')}}/{{ $pelanggan->image_profile }}" />
             @endif
         </div>
 
